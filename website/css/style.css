@@ -1,0 +1,552 @@
+/*_________ font imported ________*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700');
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+*/
+
+*{
+	margin:0;
+	padding: 0;
+}
+
+html{
+	font-size: 14px;
+}
+
+body{
+	font-size: 0.88em;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #f2c786;
+}
+p{
+	line-height: 1.7em;
+}
+h1,h2,h3,h4,h5{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
+h2{
+	font-size: 2.5em;
+	margin-bottom: 40px;
+	color: #8c4c2e;
+}
+
+.clear-fix:after {
+	display: block;
+	content: "";
+	clear: both;
+	visibility: hidden;
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0px 20px;
+}
+
+.container-sm{
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 0px 20px;
+}
+
+.button{
+	display: inline-block;
+	color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	font-size: 0.85em;
+	font-weight: 520;
+	border-radius: 10px;
+	background-color: #ffb84c;
+	-webkit-transition: background-color 10s ease , color 0.2 ease;
+	transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.button:hover{
+	background-color: #412700;
+	color: #ffb84c;
+}
+.about, .skills, .project , .contact{
+	padding-top: 100px;
+}
+
+.skill-list-bg{ background-color: #7b4215 }
+.project-bg{ background-color: #7b4215 }
+
+
+/* --- nav bar -- */
+nav{
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.6);
+	text-transform: uppercase;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	transition: transform 0.4s ease;
+
+}
+
+nav.hidden{
+	transform: translate3d(0,-100%,0);
+}
+nav ul li{
+	display: inline-block;
+	margin-right: 15px;
+	padding: 15px 0px;
+}
+
+
+nav ul li a{
+	text-decoration: none;
+	font-size: 0.875em;
+	color: #f9f2ec;
+}
+nav ul li:last-child{
+	margin-right: 0px;
+}
+
+/*-- intro --*/
+.intro
+{
+	background: #000 url('../images/introbg.jpg') no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+	padding-top: 180px;
+	padding-bottom:100px; 
+	text-align: center;
+	text-transform: uppercase;
+
+}
+
+.intro-heading{
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+
+.intro-heading h1{
+	color: white;
+	font-size: 3em;
+	font-weight: 250;
+	letter-spacing: 0.12em;
+}
+
+.intro-heading h4{
+	color: #e4d9c4;
+	font-size: 1em;
+	font-weight: 35;
+	letter-spacing: 0.3125em;
+	margin-bottom: 180px;
+}
+
+.intro .continue-btn{
+	text-decoration: none;
+	color: #ffb926;
+	font-size: 1em;
+	font-weight: 400;
+	background: url('../images/cont.png') no-repeat;
+	background-size: 77px 50px;
+	padding-bottom: 35px;
+	background-position: 50% 100%;
+}
+
+/*---------about ---*/
+.about{
+	background-color: #8c4c2e;
+	padding-bottom: 80px;
+	color: white;
+	font-size: 0.90em;
+}
+
+.about h2{
+	color: #ffdda9;
+/*	font-size: 3.75em; */
+	font-weight: 400;
+}
+
+/*---------skills ---*/
+.skill-list{
+	list-style: none;
+	text-align: center;
+}
+
+.skill{
+	padding: 20px 30px;
+	max-width: 400px;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+.skill h5{
+	font-size: 1.5em;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	color: white;
+	letter-spacing: 3px;
+}
+
+.skill p{
+	color: #f2c786;
+	font-size: 0.87em;
+}
+
+
+
+/*-------projects ------*/
+
+.project-visible{
+	box-sizing: border-box;
+	height: 310px;
+	padding-top: 20px;
+	color: white;
+	text-align: center;
+	background-repeat:  no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+.project .container{
+	padding: 0;
+}
+
+.munnar .project-visible{
+	background-image: url('../images/promunnar.jpg');	
+}
+
+.movies .project-visible{
+	background-image: url('../images/promovies.jpg');	
+}
+
+.project-list
+{
+	list-style: none;
+}
+
+.project-visible h3{
+	font-size: 2em;
+	text-transform: uppercase;
+	text-align: left;
+	font-weight: 600;
+}
+
+.project-visible blockquote{
+	text-align: left;
+	font-weight: 300;
+}
+
+.quote-info{
+	margin:50px 0 20px 0;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.quote-author{
+	color: #ffb84c;
+	font-weight: 550;
+	font-size: 1em;
+
+}
+
+.quote-author-pos{
+	color: #f2c786;
+
+}
+
+.project-extra{
+	background-color:#8c4c2e; 
+}
+
+.project-extra-images{
+	list-style: none;
+	max-width: 690px;
+	margin: 0 auto;
+}
+
+.project-extra-images img{
+	width: 33.333%;
+	float: left;
+
+}
+
+.project-extra-info li{
+	list-style: none;
+	margin-left: 25%;
+	padding-bottom: 80px; 
+}
+
+.project-extra-info{
+	box-sizing: border-box;
+	padding-top: 40px;
+	text-transform: uppercase;
+}
+
+.project-extra-info .fas , .far{
+	float: left;
+	margin-right: 20px;
+	margin-top: 5px;
+	font-size: 20px;
+	color: white;
+}
+
+.project-extra-info .label{
+	float: left;
+	font-size: 0.875em;
+	color: #ffb781;
+}
+
+.project-extra-info .label-dp{
+	font-size: 1.37em;
+	color: #ffcfac;
+}
+
+/*------- contacts ------*/
+
+.contact-bg
+{
+	background: url('../images/contactbg.jpg') no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+.contact-list{
+	padding-top: 20px;
+}
+.contact-list li{
+	list-style: none;
+	padding-bottom: 40px;
+	text-align: center;
+}
+
+.contact h6{
+	font-size: 1.5em;
+	color: #ff9a01;
+	font-weight: 400;
+	padding-bottom: 20px;
+}
+
+.contact p{
+	color: #ffdba5;
+	font-weight: 400;
+}
+
+.contact-list .fas{
+	
+	color: white;
+	margin-right: 10px;
+	padding-bottom: 20px;
+
+}
+
+.contact-list .fas, .contact h6{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/*----------form -------------*/
+
+.frm{
+	margin-bottom: 60px;
+}
+
+.frm .txt , .frm .txt-lg{
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	border: none;
+	border-bottom: 5px solid #f38e43;
+	outline: none;
+	font-size: 0.8em;
+	color: #ffdba5;
+	margin-bottom: 10px;
+	font-weight: 300;
+	padding: 4px 8px;
+	background-color: rgba(243,142,67,0.4);
+
+}
+
+.frm .button{
+	border: none;
+	outline: none;
+	font-size: 0.8em;
+	cursor: pointer;
+}
+
+.social-btn {
+	list-style: none;
+	margin: 0 auto 30px auto;
+	width: 166px;
+
+}
+
+.social-btn li{
+	float: left;
+	margin-right: 25px;
+}
+
+.social-btn li:last-child{
+	margin-right: 0px;
+}
+
+.social-btn .fab{
+	margin-top: 30px;
+	color: #f38e43;
+	font-size: 1.5em;
+
+}
+
+.social-btn .fab:hover{
+	color: #7b4215;
+
+}
+
+footer {
+	padding-bottom:40px;
+}
+
+
+
+/*------- width --980px-----------*/
+
+@media only screen and (min-width: 600px) {
+
+	nav ul li{
+	margin-right: 55px;
+}
+
+	nav ul li a{
+	font-size: 0.875em;
+	}
+
+	html{
+		font-size: 16px;
+	}
+
+	h2{
+		font-size: 3em;
+	}
+
+	.intro-heading h1{
+	font-size: 4em;
+	font-weight: 250;
+	letter-spacing: 0.12em;
+}
+
+	.contact-list li{
+		float: left;
+		width: 33.333%;
+		box-sizing: border-box;
+		padding: 0px 20px;
+	}
+
+	.contact-list li:last-child{
+		margin-right: 0px;
+	}
+
+	.social-btn{
+		float: right;
+		clear: both;
+	}
+
+	.contact-list:after{
+	display: block;
+	content: "";
+	clear: both;
+	visibility: hidden;
+}
+
+.contact-bg:after{
+	display: block;
+	content: "";
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	line-height: 0;
+
+} 
+
+
+
+	.contact-list{
+		margin-bottom: 20px;
+	}
+
+}
+
+/*------------- 800 ---------------*/
+
+@media only screen and (min-width: 800px) {
+	html{
+		font-size: 18px;
+	}
+
+	body{
+		font-size: 0.875em;
+	}
+
+	nav ul li{
+	margin-right: 65px;
+}
+
+.skill {
+	float: left;
+	width: 33.33%;
+	display: inline-block;
+	max-width: none;
+	padding: 120px 0;
+	height: 400px;
+	box-sizing: border-box;
+}
+.skill h5{
+	font-size: 2em;
+	letter-spacing: 5px;
+}
+
+.skill p{
+	margin: 0 20%;
+	font-weight: 300;
+}
+
+.skill:last-child {
+	margin-right: 0;
+}
+
+}
+
+/*------------ 1000 -----------*/
+
+@media only screen and (min-width: 1000px) {
+
+	html{
+		font-size: 20px;
+	}
+
+	body{
+		font-size: 0.875em;
+	}
+
+	nav ul li{
+	margin-right: 95px;
+}
+
+.skill-list .posser{
+	background-image: url('../images/skillposs.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.skill-list .music{
+	background-image: url('../images/skillmusic.jpg');
+}
+
+.skill-list .travel{
+	background-image: url('../images/skilltravel.jpg');
+}
+
+}
